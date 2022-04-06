@@ -1,12 +1,14 @@
 import { View,Text,StyleSheet } from "react-native"
+import ScreenContainer from "../components/ScreenContainer"
 import ScreenHeader from "../components/ScreenHeader"
 
 
 const ChatScreen = () => {
-    return <View style={styles.container}> 
-        
+    return <ScreenContainer>
+    <View style={styles.container}> 
         <Text>ChatRoom</Text>
-    </View>
+        </View>
+         </ScreenContainer>
 }
 export default ChatScreen
 
