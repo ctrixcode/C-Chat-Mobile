@@ -10,13 +10,13 @@ export default function MainApp() {
   const Tab = createMaterialTopTabNavigator()
   return (
     <View style={styles.container}>
-    <StatusBar backgroundColor={tertiary} />
+   <StatusBar backgroundColor={tertiary} />
     <NavigationContainer>
     <Tab.Navigator initialRouteName='Home'>
     <Tab.Screen name="Home" component={ChatRoom} />
     <Tab.Screen name="Contacts" component={ContactScreen} />
     </Tab.Navigator>
-    </NavigationContainer>
+    </NavigationContainer> 
     </View>
   );
 }

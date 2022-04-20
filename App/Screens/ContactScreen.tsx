@@ -4,7 +4,7 @@ import ScreenHeader from "../components/ScreenHeader"
 
 const ContactScreen = () => {
     return <ScreenContainer>
-         <ScreenHeader></ScreenHeader>
+         {/* <ScreenHeader></ScreenHeader> */}
         <Text>Contact Screen</Text>
     </ScreenContainer>
 }
