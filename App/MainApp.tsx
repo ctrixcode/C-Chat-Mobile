@@ -1,3 +1,4 @@
+import React from 'react';
 import {  View,StyleSheet,StatusBar } from 'react-native';
 import { tertiary } from './Global/Colors';
 import { NavigationContainer } from '@react-navigation/native';

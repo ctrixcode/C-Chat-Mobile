@@ -1,3 +1,4 @@
+import React from "react"
 import { View,Text,StyleSheet } from "react-native"
 import ScreenContainer from "../components/ScreenContainer"
 import ScreenHeader from "../components/ScreenHeader"
