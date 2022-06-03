@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212661153134",
+    "project_id": "messenger-dev-8fcf3",
+    "storage_bucket": "messenger-dev-8fcf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212661153134:android:71a6a53a4dae201acd657f",
+        "android_client_info": {
+          "package_name": "com.ctrix.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212661153134-lonbugnjnsn1utaqqfi9o08afgbnmnt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVoV_OL2HKZdg8FgfXlsYsmzf6WsJflko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212661153134-lonbugnjnsn1utaqqfi9o08afgbnmnt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

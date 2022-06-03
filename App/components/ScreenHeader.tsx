@@ -10,7 +10,7 @@ return <View style={styles.container}>
 
 const styles = StyleSheet.create({
     container: {
-        height: "10vh"
+        height: "10"
     }
 })
 

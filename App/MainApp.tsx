@@ -1,31 +1,47 @@
-import React from 'react';
-import {  View,StyleSheet,StatusBar } from 'react-native';
-import { tertiary } from './Global/Colors';
-import { NavigationContainer } from '@react-navigation/native';
-import ChatRoom from "../App/Screens/ChatScreen"
-import ContactScreen from '../App/Screens/ContactScreen';
+import React, { useEffect } from "react";
+import { View, StyleSheet, StatusBar } from "react-native";
+import { tertiary } from "./Global/Colors";
 
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { useAppContext } from "./Global/Context";
+import LoginScreen from "./Screens/LoginScreen";
+
+import { onAuthStateChanged } from "firebase/auth";
+
+import { auth } from "./Firebase/Firebase-config";
+import DrawerNavigatationStack from "./components/DrawerNavigatationStack";
 
 export default function MainApp() {
-  const Tab = createMaterialTopTabNavigator()
+  const contextData = useAppContext();
+
+  // Checking if user is Signed In
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // setUserLogged(true);
+        contextData.setIsUserSignIn(true);
+      }
+    });
+  }, [auth]);
+
   return (
-    <View style={styles.container}>
-   <StatusBar backgroundColor={tertiary} />
-    <NavigationContainer>
-    <Tab.Navigator initialRouteName='Home'>
-    <Tab.Screen name="Home" component={ChatRoom} />
-    <Tab.Screen name="Contacts" component={ContactScreen} />
-    </Tab.Navigator>
-    </NavigationContainer> 
-    </View>
+    <>
+      {contextData.isUserSignIn ? (
+        <View style={styles.container}>
+          <StatusBar backgroundColor={tertiary} />
+          <DrawerNavigatationStack />
+        </View>
+      ) : (
+        <LoginScreen />
+      )}
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-  backgroundColor: tertiary,
-  flex: 1,
-  // paddingTop: StatusBar.currentHeight,
-}
-})
+    backgroundColor: tertiary,
+    flex: 1,
+    // paddingTop: StatusBar.currentHeight,
+  },
+});

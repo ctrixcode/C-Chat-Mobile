@@ -1,12 +1,10 @@
-import React from "react"
-import { View,Text } from "react-native"
-import ScreenContainer from "../components/ScreenContainer"
-import ScreenHeader from "../components/ScreenHeader"
+import React from "react";
+
+import ScreenContainer from "../components/ScreenContainer";
 
 const ContactScreen = () => {
-    return <ScreenContainer>
-         {/* <ScreenHeader></ScreenHeader> */}
-        <Text>Contact Screen</Text>
-    </ScreenContainer>
-}
-export default ContactScreen
+  return (
+    <ScreenContainer>{/* <ScreenHeader></ScreenHeader> */}</ScreenContainer>
+  );
+};
+export default ContactScreen;
